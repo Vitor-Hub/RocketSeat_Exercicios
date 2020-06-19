@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Exercicio 3</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            
+            var body = document.querySelector('body');
+            var div = document.createElement('div');
+            body.appendChild(div);
+
+            var ul = document.createElement('ul');
+            div.appendChild(ul);
+
+            for (x of nomes){
+
+                var li = document.createElement('li');
+                ul.appendChild(li);
+                var text = document.createTextNode(x);
+                li.appendChild(text);
+                
+            }
+
+            
+            
+
+        </script>
+    </body>
+</html>

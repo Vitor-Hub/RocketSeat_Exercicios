@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+
+    <body>
+        <div id = 'app'>
+            <input name="nome" onmouseover="mostraConsole()"/> Aula 1
+        
+            <input type= "text"  id="IDinput" class="classe"/> Aula 2
+
+            <button> Pressione </button>
+        </div>
+
+        <div class="box"></div>
+
+        <script>
+
+            function mostraConsole(){
+                console.log('Botao clicado');
+            }
+
+
+            var inputElement = document.getElementsByTagName('input')[1];
+
+            var inputElement2 = document.querySelector('div#app input.classe');
+
+            var inputElement3 = document.querySelector('input[name=nome]');
+            console.log(inputElement3);
+
+            var button = document.querySelector('div#app button');
+
+
+            button.onclick = function (){
+                var text = inputElement3.value;
+
+                alert(text);
+            }
+
+
+
+
+            // Lidando com Elementos
+
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'hhtp://www.google.com');
+
+            var textElement = document.createTextNode('Acessar ao google');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
+
+            containerElement.removeChild(inputElement);
+
+
+
+
+            // Alterando Estilos
+
+            var boxElement = document.querySelector('.box');
+            
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#f00';
+            
+
+        </script>
+    </body>
+</html>

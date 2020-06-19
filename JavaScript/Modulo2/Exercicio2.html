@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Exercicio 2</title>
+    </head>
+
+    <body>
+
+        <button>Criar Quadrado</button>
+
+        <script>
+            
+            var button = document.querySelector('button');
+            var body = document.querySelector('body');
+            
+            button.onclick = function() {
+
+                var divQuadrado = document.createElement('div');
+                    
+                body.appendChild(divQuadrado);
+                
+                divQuadrado.style.width = 100;
+                divQuadrado.style.height = 100;
+                divQuadrado.style.backgroundColor = '#f00';
+                divQuadrado.style.margin = 10;
+
+                divQuadrado.onmouseover = function() {
+                    divQuadrado.style.backgroundColor = getRandomColor();
+                }
+            }
+
+
+            function getRandomColor() {
+                
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                
+                return color;
+            }
+            
+            
+
+        </script>
+    </body>
+</html>
